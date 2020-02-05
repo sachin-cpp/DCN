@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int data[50],r1,r2,r3;
+cout<<"enter data: \n";
+for(int i=1;i<8;i++)
+{    
+	if(i==7)
+    {
+    data[i]=7;
+    continue;
+    }
+    if(i==6)
+    {
+    data[i]=7;
+    continue;
+    }
+    if(i==4)
+    {
+    data[i]=7;
+    continue;
+    }
+    cin>>data[i];
+    }
+int i,j;
+
+r1 = data[3]^data[5]^data[1];
+
+r2 = data[1]^data[2]^data[5];
+
+r3 = data[1]^data[2]^data[3];
+
+cout<<"generated bits\n";
+cout<<"r1: "<<r1<<endl;
+cout<<"r2: "<<r2<<endl;
+cout<<"r3: "<<r3<<endl;
+data[7]=r1;
+data[6]=r2;
+data[4]=r3;
+
+cout<<"\nactual data: ";
+for(int i=1;i<8;i++)
+{
+    cout<<data[i];
+}
+}
