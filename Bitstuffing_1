@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stdio.h>
+#include <string> 
+using namespace std;
+
+int main()
+{
+    
+    int t,k,r;
+    string test;
+    string key;
+    string res;
+    cout<<"enter test string";
+    cin>>test;
+    cout<<"enter key string";
+    cin>>key;
+    t=test.length();
+    k=key.length();
+    res=test;
+    string zero("0");
+    
+    for(int i=0;i<t-3;i++)
+    {
+        
+        if((test[i]==key[0])&&(test[i+1]==key[1])&&(test[i+2]==key[2]))
+        {
+            
+            cout<<"hey";
+            i=i+2;
+            res.insert(i+2,zero);
+            
+                
+        }
+    }
+    cout<<res;
+}
