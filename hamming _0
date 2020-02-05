@@ -1,0 +1,79 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    
+    int t,k,r,count=0;
+    
+    cout<<"enter length of test string";
+    cin>>t;
+    int test[t];
+    cout<<"enter test string";
+    for(int i=0;i<t;i++)
+    {
+    cin>>test[i];
+    }
+    cout<<"enter length of key string";
+    cin>>k;
+    int key[k];
+    cout<<"enter key string";
+    for(int i=0;i<k;i++)
+    {
+    cin>>key[i];
+    }
+    
+    
+    
+    int res[t+k+1]={0};
+    cout<<t<<"length of test";
+    
+    
+    for(int i=0;i<t;i++)
+    {
+        if(test[i]==key[0])
+        {
+            if(test[i+1]==key[1])
+            {
+                if(test[i+2]==key[2])
+                {
+                    cout<<i<<endl;
+                    cout<<"hurray";
+                    int j=0;
+                    for(j;j<i;j++)
+                    {
+                        res[j]=test[j];
+                        count++;
+                        cout<<res[j];
+                    }
+                    cout<<"pehla";
+                    int a=0,b=i+k-1;
+                    for( a;a<k-1;a++)
+                    {
+                        res[i+a]=key[a];
+                        cout<<res[i+a];
+                    }
+                    cout<<"dusra";
+                    //cout<<"a"<<a<<"a";
+                    //res[i+a]='0';
+                    //cout<<res[i+a];
+                    cout<<"0";
+                    cout<<"teesra";
+                    for(b;b<t;b++)
+                    {
+                        
+                        res[b+1]=test[b];
+                        cout<<res[b+1];
+                       
+                    }
+                    cout<<"chautha";
+                    count++;
+                }
+            }
+        }
+        
+        
+        
+    }
+}
