@@ -30,6 +30,7 @@ int main()
             res.insert(i+2,zero);
             
                 
+                
         }
     }
     cout<<res;
